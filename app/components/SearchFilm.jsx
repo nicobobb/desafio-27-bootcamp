@@ -13,7 +13,7 @@ const SearchFilm = () => {
       const data = await api(searchTerm);
       setFilms(data.results);
     } catch (error) {
-      console.error("Error:", error);
+      throw error;
     }
   };
 

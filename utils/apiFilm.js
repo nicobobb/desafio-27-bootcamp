@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const api = async (query) => {
-  const url = "https://api.themoviedb.org/3/search/movie";
+const apiFilm = async (query) => {
+  const url = `https://api.themoviedb.org/3/movie/${query}`;
   const apiKey = "93a854c305ae92fed86d6a780c06c862";
 
   const config = {
@@ -10,7 +10,6 @@ const api = async (query) => {
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5M2E4NTRjMzA1YWU5MmZlZDg2ZDZhNzgwYzA2Yzg2MiIsInN1YiI6IjY2MTVkZWRhZGMxY2I0MDE3YzFiNWQxYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N03-Q0_ojS5txcYt1YFJ7BVd7yBKhUdpq0AkSH9NYE0",
     },
     params: {
-      query: query,
       language: "es-ES",
     },
   };
@@ -23,4 +22,4 @@ const api = async (query) => {
   }
 };
 
-export default api;
+export default apiFilm;

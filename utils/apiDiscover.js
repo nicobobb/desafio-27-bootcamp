@@ -18,7 +18,6 @@ const apiDiscover = async () => {
     const response = await axios.get(url, config);
     return response.data;
   } catch (error) {
-    console.error("Error al traer los datos:", error);
     throw error;
   }
 };
